@@ -7,9 +7,9 @@ describe('Consultation e2e test', () => {
     let navBarPage: NavBarPage;
     let consultationDialogPage: ConsultationDialogPage;
     let consultationComponentsPage: ConsultationComponentsPage;
-    const fileToUpload = '../../../../main/webapp/content/images/logo-jhipster.png';
+    const fileToUpload = '../../../../main/webapp/content/images/logo-doctor.png';
     const absolutePath = path.resolve(__dirname, fileToUpload);
-    
+
 
     beforeAll(() => {
         browser.get('/');
@@ -47,7 +47,7 @@ describe('Consultation e2e test', () => {
         // consultationDialogPage.actesMedicalListSelectLastOption();
         consultationDialogPage.save();
         expect(consultationDialogPage.getSaveButton().isPresent()).toBeFalsy();
-    }); 
+    });
 
     afterAll(() => {
         navBarPage.autoSignOut();

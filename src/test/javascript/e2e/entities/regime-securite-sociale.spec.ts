@@ -7,9 +7,9 @@ describe('RegimeSecuriteSociale e2e test', () => {
     let navBarPage: NavBarPage;
     let regimeSecuriteSocialeDialogPage: RegimeSecuriteSocialeDialogPage;
     let regimeSecuriteSocialeComponentsPage: RegimeSecuriteSocialeComponentsPage;
-    const fileToUpload = '../../../../main/webapp/content/images/logo-jhipster.png';
+    const fileToUpload = '../../../../main/webapp/content/images/logo-doctor.png';
     const absolutePath = path.resolve(__dirname, fileToUpload);
-    
+
 
     beforeAll(() => {
         browser.get('/');
@@ -41,7 +41,7 @@ describe('RegimeSecuriteSociale e2e test', () => {
         expect(regimeSecuriteSocialeDialogPage.getLibelleInput()).toMatch('libelle');
         regimeSecuriteSocialeDialogPage.save();
         expect(regimeSecuriteSocialeDialogPage.getSaveButton().isPresent()).toBeFalsy();
-    }); 
+    });
 
     afterAll(() => {
         navBarPage.autoSignOut();

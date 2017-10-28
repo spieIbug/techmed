@@ -2,7 +2,7 @@
     "techmedApp": {
         "codeCCAM" : {
             "home": {
-                "title": "ترميز CCAMS",
+                "title": "ترميز CCAM",
                 "createLabel": "إضافة ترميز CCAM",
                 "createOrEditLabel": "إضافة أو تغيير ترميز CCAM"
             },

@@ -7,9 +7,9 @@ describe('Tarif e2e test', () => {
     let navBarPage: NavBarPage;
     let tarifDialogPage: TarifDialogPage;
     let tarifComponentsPage: TarifComponentsPage;
-    const fileToUpload = '../../../../main/webapp/content/images/logo-jhipster.png';
+    const fileToUpload = '../../../../main/webapp/content/images/logo-doctor.png';
     const absolutePath = path.resolve(__dirname, fileToUpload);
-    
+
 
     beforeAll(() => {
         browser.get('/');
@@ -57,7 +57,7 @@ describe('Tarif e2e test', () => {
         tarifDialogPage.acteMedicalSelectLastOption();
         tarifDialogPage.save();
         expect(tarifDialogPage.getSaveButton().isPresent()).toBeFalsy();
-    }); 
+    });
 
     afterAll(() => {
         navBarPage.autoSignOut();

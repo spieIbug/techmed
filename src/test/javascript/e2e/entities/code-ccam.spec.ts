@@ -7,9 +7,9 @@ describe('CodeCCAM e2e test', () => {
     let navBarPage: NavBarPage;
     let codeCCAMDialogPage: CodeCCAMDialogPage;
     let codeCCAMComponentsPage: CodeCCAMComponentsPage;
-    const fileToUpload = '../../../../main/webapp/content/images/logo-jhipster.png';
+    const fileToUpload = '../../../../main/webapp/content/images/logo-doctor.png';
     const absolutePath = path.resolve(__dirname, fileToUpload);
-    
+
 
     beforeAll(() => {
         browser.get('/');
@@ -41,7 +41,7 @@ describe('CodeCCAM e2e test', () => {
         expect(codeCCAMDialogPage.getLibelleInput()).toMatch('libelle');
         codeCCAMDialogPage.save();
         expect(codeCCAMDialogPage.getSaveButton().isPresent()).toBeFalsy();
-    }); 
+    });
 
     afterAll(() => {
         navBarPage.autoSignOut();

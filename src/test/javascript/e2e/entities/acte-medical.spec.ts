@@ -7,9 +7,9 @@ describe('ActeMedical e2e test', () => {
     let navBarPage: NavBarPage;
     let acteMedicalDialogPage: ActeMedicalDialogPage;
     let acteMedicalComponentsPage: ActeMedicalComponentsPage;
-    const fileToUpload = '../../../../main/webapp/content/images/logo-jhipster.png';
+    const fileToUpload = '../../../../main/webapp/content/images/logo-doctor.png';
     const absolutePath = path.resolve(__dirname, fileToUpload);
-    
+
 
     beforeAll(() => {
         browser.get('/');
@@ -42,7 +42,7 @@ describe('ActeMedical e2e test', () => {
         acteMedicalDialogPage.codeCCAMSelectLastOption();
         acteMedicalDialogPage.save();
         expect(acteMedicalDialogPage.getSaveButton().isPresent()).toBeFalsy();
-    }); 
+    });
 
     afterAll(() => {
         navBarPage.autoSignOut();

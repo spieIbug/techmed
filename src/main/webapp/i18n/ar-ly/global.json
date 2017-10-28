@@ -4,18 +4,24 @@
         "browsehappy": "أنت تستخدم متصفح <strong>قديم</strong> . من فضلك <a href=\"http://browsehappy.com/?locale=en\">قم بتحديث متصفحك</a> لتحسين تجربتك.",
         "menu": {
             "home": "الصفحة الرئيسية",
+            "consultation": "الفحوص الطبية",
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "الكيانات",
-                "patient": "Patient",
-                "acteMedical": "Acte Medical",
-                "codeCcam": "Code CCAM",
-                "moyenPaiement": "Moyen Paiement",
-                "tarif": "Tarif",
-                "regimeSecuriteSociale": "Regime Securite Sociale",
-                "consultation": "Consultation",
-                "paiement": "Paiement",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
+            },
+            "administratif": {
+                "main": "إعدادات إدارية",
+                "acteMedical": "إجراءات طبية",
+                "patient": "المرضى",
+                "codeCcam": "ترميز CCAM",
+                "regimeSecuriteSociale": "نضام الضمان الإجتماعي"
+            },
+            "comptabilite": {
+                "main": "محاسبة",
+                "moyenPaiement": "وسائل الدفع",
+                "tarif": "الأسعار",
+                "paiement": "المدفوعات"
             },
             "account": {
                 "main": "الحساب",

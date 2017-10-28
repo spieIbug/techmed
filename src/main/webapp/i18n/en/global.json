@@ -4,18 +4,23 @@
         "browsehappy": "You are using an <strong>outdated</strong> browser. Please <a href=\"http://browsehappy.com/?locale=en\">upgrade your browser</a> to improve your experience.",
         "menu": {
             "home": "Home",
+            "consultation": "Consultation",
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
-                "main": "Entities",
-                "patient": "Patient",
-                "acteMedical": "Acte Medical",
-                "codeCcam": "Code CCAM",
-                "moyenPaiement": "Moyen Paiement",
-                "tarif": "Tarif",
-                "regimeSecuriteSociale": "Regime Securite Sociale",
-                "consultation": "Consultation",
-                "paiement": "Paiement",
-                "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
+                "main": "Entities"
+            },
+            "administratif": {
+                "main": "Administratif",
+                "acteMedical": "Medical Acts",
+                "patient": "Patients",
+                "codeCcam": "CCAM Codes",
+                "regimeSecuriteSociale": "Social Security schemes"
+            },
+            "comptabilite": {
+                "main": "Comptability",
+                "moyenPaiement": "Payment Methods",
+                "tarif": "Tariffs",
+                "paiement": "Payments"
             },
             "account": {
                 "main": "Account",
