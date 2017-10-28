@@ -1,0 +1,70 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "patient",
+            "otherEntityName": "patient",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "consultation"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "medecin",
+            "otherEntityName": "user",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "consultation"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "regimeSecuriteSociale",
+            "otherEntityName": "regimeSecuriteSociale",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "consultation"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "paiements",
+            "otherEntityName": "paiement",
+            "otherEntityRelationshipName": "consultation"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "consultationList",
+            "relationshipName": "actesMedicalList",
+            "otherEntityName": "acteMedical",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "dateActe",
+            "fieldType": "ZonedDateTime",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "montantTTC",
+            "fieldType": "Double",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "lock",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        }
+    ],
+    "changelogDate": "20171028155437",
+    "entityTableName": "consultation",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false
+}

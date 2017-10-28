@@ -1,0 +1,72 @@
+<div>
+    <h2>
+        <span jhiTranslate="techmedApp.tarif.home.title">Tarifs</span>
+        <button class="btn btn-primary float-right jh-create-entity create-tarif" [routerLink]="['/', { outlets: { popup: ['tarif-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="techmedApp.tarif.home.createLabel">
+            Create new Tarif
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="tarifs">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="techmedApp.tarif.prixHT">Prix HT</span></th>
+            <th><span jhiTranslate="techmedApp.tarif.tva">Tva</span></th>
+            <th><span jhiTranslate="techmedApp.tarif.prixTTC">Prix TTC</span></th>
+            <th><span jhiTranslate="techmedApp.tarif.actif">Actif</span></th>
+            <th><span jhiTranslate="techmedApp.tarif.dateDebut">Date Debut</span></th>
+            <th><span jhiTranslate="techmedApp.tarif.dateFin">Date Fin</span></th>
+            <th><span jhiTranslate="techmedApp.tarif.acteMedical">Acte Medical</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let tarif of tarifs ;trackBy: trackId">
+                <td><a [routerLink]="['../tarif', tarif.id ]">{{tarif.id}}</a></td>
+                <td>{{tarif.prixHT}}</td>
+                <td>{{tarif.tva}}</td>
+                <td>{{tarif.prixTTC}}</td>
+                <td>{{tarif.actif}}</td>
+                <td>{{tarif.dateDebut | date:'medium'}}</td>
+                <td>{{tarif.dateFin | date:'medium'}}</td>
+                <td>
+                    <div *ngIf="tarif.acteMedicalId">
+                        <a [routerLink]="['../acte-medical', tarif.acteMedicalId  ]" >{{tarif.acteMedicalId}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../tarif', tarif.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'tarif/'+ tarif.id + '/edit'} }]"
+                                replaceUrl="true"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'tarif/'+ tarif.id + '/delete'} }]"
+                                replaceUrl="true"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

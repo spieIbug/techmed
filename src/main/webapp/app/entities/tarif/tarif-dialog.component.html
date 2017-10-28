@@ -1,0 +1,106 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myTarifLabel" jhiTranslate="techmedApp.tarif.home.createOrEditLabel">Create or edit a Tarif</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!tarif.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="tarif.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="techmedApp.tarif.prixHT" for="field_prixHT">Prix HT</label>
+            <input type="number" class="form-control" name="prixHT" id="field_prixHT"
+                [(ngModel)]="tarif.prixHT" required />
+            <div [hidden]="!(editForm.controls.prixHT?.dirty && editForm.controls.prixHT?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.prixHT?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+                <small class="form-text text-danger"
+                    [hidden]="!editForm.controls.prixHT?.errors?.number" jhiTranslate="entity.validation.number">
+                    This field should be a number.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="techmedApp.tarif.tva" for="field_tva">Tva</label>
+            <input type="number" class="form-control" name="tva" id="field_tva"
+                [(ngModel)]="tarif.tva" required />
+            <div [hidden]="!(editForm.controls.tva?.dirty && editForm.controls.tva?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.tva?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+                <small class="form-text text-danger"
+                    [hidden]="!editForm.controls.tva?.errors?.number" jhiTranslate="entity.validation.number">
+                    This field should be a number.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="techmedApp.tarif.prixTTC" for="field_prixTTC">Prix TTC</label>
+            <input type="number" class="form-control" name="prixTTC" id="field_prixTTC"
+                [(ngModel)]="tarif.prixTTC" required />
+            <div [hidden]="!(editForm.controls.prixTTC?.dirty && editForm.controls.prixTTC?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.prixTTC?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+                <small class="form-text text-danger"
+                    [hidden]="!editForm.controls.prixTTC?.errors?.number" jhiTranslate="entity.validation.number">
+                    This field should be a number.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="techmedApp.tarif.actif" for="field_actif">Actif</label>
+            <input type="checkbox" class="form-control" name="actif" id="field_actif"
+                [(ngModel)]="tarif.actif"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="techmedApp.tarif.dateDebut" for="field_dateDebut">Date Debut</label>
+            <div class="d-flex">
+                <input id="field_dateDebut" type="datetime-local" class="form-control" name="dateDebut" [(ngModel)]="tarif.dateDebut"
+                required  />
+            </div>
+            <div [hidden]="!(editForm.controls.dateDebut?.dirty && editForm.controls.dateDebut?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.dateDebut?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+                <small class="form-text text-danger"
+                    [hidden]="!editForm.controls.dateDebut?.errors?.ZonedDateTimelocal" jhiTranslate="entity.validation.ZonedDateTimelocal">
+                    This field should be a date and time.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="techmedApp.tarif.dateFin" for="field_dateFin">Date Fin</label>
+            <div class="d-flex">
+                <input id="field_dateFin" type="datetime-local" class="form-control" name="dateFin" [(ngModel)]="tarif.dateFin"
+                  />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="techmedApp.tarif.acteMedical" for="field_acteMedical">Acte Medical</label>
+            <select class="form-control" id="field_acteMedical" name="acteMedical" [(ngModel)]="tarif.acteMedicalId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="acteMedicalOption.id" *ngFor="let acteMedicalOption of actemedicals; trackBy: trackActeMedicalById">{{acteMedicalOption.id}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,55 @@
+
+<div *ngIf="consultation">
+    <h2><span jhiTranslate="techmedApp.consultation.detail.title">Consultation</span> {{consultation.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="techmedApp.consultation.dateActe">Date Acte</span></dt>
+        <dd>
+            <span>{{consultation.dateActe | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="techmedApp.consultation.montantTTC">Montant TTC</span></dt>
+        <dd>
+            <span>{{consultation.montantTTC}}</span>
+        </dd>
+        <dt><span jhiTranslate="techmedApp.consultation.lock">Lock</span></dt>
+        <dd>
+            <span>{{consultation.lock}}</span>
+        </dd>
+        <dt><span jhiTranslate="techmedApp.consultation.patient">Patient</span></dt>
+        <dd>
+            <div *ngIf="consultation.patientId">
+                <a [routerLink]="['/patient', consultation.patientId]">{{consultation.patientId}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="techmedApp.consultation.medecin">Medecin</span></dt>
+        <dd>
+            {{consultation.medecinId}}
+        </dd>
+        <dt><span jhiTranslate="techmedApp.consultation.regimeSecuriteSociale">Regime Securite Sociale</span></dt>
+        <dd>
+            <div *ngIf="consultation.regimeSecuriteSocialeId">
+                <a [routerLink]="['/regime-securite-sociale', consultation.regimeSecuriteSocialeId]">{{consultation.regimeSecuriteSocialeId}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="techmedApp.consultation.actesMedicalList">Actes Medical List</span></dt>
+        <dd>
+            <span *ngFor="let actesMedicalList of consultation.actesMedicalLists; let last = last">
+                <a [routerLink]="['/acte-medical', actesMedicalList?.id ]">{{actesMedicalList.id}}</a>{{last ? '' : ', '}}
+            </span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'consultation/'+ consultation.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

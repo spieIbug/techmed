@@ -1,0 +1,21 @@
+{
+    "techmedApp": {
+        "moyenPaiement" : {
+            "home": {
+                "title": "Moyen Paiements",
+                "createLabel": "Create a new Moyen Paiement",
+                "createOrEditLabel": "Create or edit a Moyen Paiement"
+            },
+            "created": "A new Moyen Paiement is created with identifier {{ param }}",
+            "updated": "A Moyen Paiement is updated with identifier {{ param }}",
+            "deleted": "A Moyen Paiement is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Moyen Paiement {{ id }}?"
+            },
+            "detail": {
+                "title": "Moyen Paiement"
+            },
+            "mode": "Mode"
+        }
+    }
+}

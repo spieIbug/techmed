@@ -1,0 +1,27 @@
+{
+    "techmedApp": {
+        "tarif" : {
+            "home": {
+                "title": "Tarifs",
+                "createLabel": "Créer un nouveau Tarif",
+                "createOrEditLabel": "Créer ou éditer un Tarif"
+            },
+            "created": "Un nouveau Tarif a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Tarif avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Tarif avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Tarif {{ id }} ?"
+            },
+            "detail": {
+                "title": "Tarif"
+            },
+            "prixHT": "Prix HT",
+            "tva": "Tva",
+            "prixTTC": "Prix TTC",
+            "actif": "Actif",
+            "dateDebut": "Date Debut",
+            "dateFin": "Date Fin",
+            "acteMedical": "Acte Medical"
+        }
+    }
+}

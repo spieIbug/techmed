@@ -1,0 +1,78 @@
+entity Patient {
+    nom String required
+    prenom String required
+    dateNaissance ZonedDateTime required
+}
+ entity ActeMedical {
+ 	code String required
+ 	libelle String required
+ }
+ 
+ entity CodeCCAM {
+ 	code String required,
+    Libelle String required
+ }
+
+entity MoyenPaiement {
+	mode String required
+}
+
+entity Tarif {
+	prixHT Double required
+    tva Double required
+    prixTTC Double required
+    actif Boolean
+    dateDebut ZonedDateTime required
+    dateFin ZonedDateTime
+}
+
+entity RegimeSecuriteSociale {
+	code String required
+    Libelle String required
+}
+
+entity Consultation {
+	dateActe ZonedDateTime required
+    montantTTC Double required
+    lock TextBlob
+}
+
+entity Paiement {
+	dateTransation ZonedDateTime required
+    montantTTC Double required
+}
+
+relationship OneToOne {
+	Paiement{moyen} to MoyenPaiement
+}
+
+relationship OneToMany {
+	CodeCCAM{acteMedicalList} to ActeMedical
+}
+
+relationship OneToMany {
+	ActeMedical{tarifs} to Tarif
+}
+
+relationship OneToOne {
+	Consultation{patient} to Patient,
+    Consultation{medecin} to User,
+    Consultation{regimeSecuriteSociale} to RegimeSecuriteSociale
+}
+
+relationship OneToMany {
+    Consultation{paiements} to Paiement
+}
+
+relationship ManyToMany {
+  Consultation{actesMedicalList} to ActeMedical{consultationList}
+}
+
+// Set pagination options
+paginate MoyenPaiement with infinite-scroll
+paginate Patient, RegimeSecuriteSociale,  ActeMedical, CodeCCAM, Paiement, Consultation with pagination
+
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl

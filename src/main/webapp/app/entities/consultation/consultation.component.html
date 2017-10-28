@@ -1,0 +1,84 @@
+<div>
+    <h2>
+        <span jhiTranslate="techmedApp.consultation.home.title">Consultations</span>
+        <button class="btn btn-primary float-right jh-create-entity create-consultation" [routerLink]="['/', { outlets: { popup: ['consultation-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="techmedApp.consultation.home.createLabel">
+            Create new Consultation
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="consultations">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="dateActe"><span jhiTranslate="techmedApp.consultation.dateActe">Date Acte</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="montantTTC"><span jhiTranslate="techmedApp.consultation.montantTTC">Montant TTC</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="lock"><span jhiTranslate="techmedApp.consultation.lock">Lock</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="patientId"><span jhiTranslate="techmedApp.consultation.patient">Patient</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="medecinId"><span jhiTranslate="techmedApp.consultation.medecin">Medecin</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="regimeSecuriteSocialeId"><span jhiTranslate="techmedApp.consultation.regimeSecuriteSociale">Regime Securite Sociale</span> <span class="fa fa-sort"></span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let consultation of consultations ;trackBy: trackId">
+                <td><a [routerLink]="['../consultation', consultation.id ]">{{consultation.id}}</a></td>
+                <td>{{consultation.dateActe | date:'medium'}}</td>
+                <td>{{consultation.montantTTC}}</td>
+                <td>{{consultation.lock}}</td>
+                <td>
+                    <div *ngIf="consultation.patientId">
+                        <a [routerLink]="['../patient', consultation.patientId  ]" >{{consultation.patientId}}</a>
+                    </div>
+                </td>
+                <td>
+                    {{consultation.medecinId}}
+                </td>
+                <td>
+                    <div *ngIf="consultation.regimeSecuriteSocialeId">
+                        <a [routerLink]="['../regime-securite-sociale', consultation.regimeSecuriteSocialeId  ]" >{{consultation.regimeSecuriteSocialeId}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../consultation', consultation.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'consultation/'+ consultation.id + '/edit'} }]"
+                                replaceUrl="true"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'consultation/'+ consultation.id + '/delete'} }]"
+                                replaceUrl="true"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+        <div *ngIf="consultations && consultations.length">
+            <div class="row justify-content-center">
+                <jhi-item-count [page]="page" [total]="queryCount" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+            </div>
+            <div class="row justify-content-center">
+                <ngb-pagination [collectionSize]="totalItems" [maxSize]="5" [pageSize]="itemsPerPage" [(page)]="page" (pageChange)="loadPage(page)"></ngb-pagination>
+            </div>
+        </div>
+</div>

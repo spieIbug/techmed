@@ -7,6 +7,14 @@
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entities",
+                "patient": "Patient",
+                "acteMedical": "Acte Medical",
+                "codeCcam": "Code CCAM",
+                "moyenPaiement": "Moyen Paiement",
+                "tarif": "Tarif",
+                "regimeSecuriteSociale": "Regime Securite Sociale",
+                "consultation": "Consultation",
+                "paiement": "Paiement",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
@@ -128,5 +136,5 @@
         "emailexists": "Email is already in use!",
         "idexists": "A new {{ entityName }} cannot already have an ID"
     },
-    "footer": "This is your footer"
+    "footer": "TechMed is an open source SaaS"
 }

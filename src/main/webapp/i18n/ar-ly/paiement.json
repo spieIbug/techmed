@@ -1,0 +1,24 @@
+{
+    "techmedApp": {
+        "paiement" : {
+            "home": {
+                "title": "Paiements",
+                "createLabel": "Create a new Paiement",
+                "createOrEditLabel": "Create or edit a Paiement"
+            },
+            "created": "A new Paiement is created with identifier {{ param }}",
+            "updated": "A Paiement is updated with identifier {{ param }}",
+            "deleted": "A Paiement is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Paiement {{ id }}?"
+            },
+            "detail": {
+                "title": "Paiement"
+            },
+            "dateTransation": "Date Transation",
+            "montantTTC": "Montant TTC",
+            "consultation": "Consultation",
+            "moyen": "Moyen"
+        }
+    }
+}

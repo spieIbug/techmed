@@ -1,0 +1,41 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "consultation",
+            "otherEntityName": "consultation",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "moyen",
+            "otherEntityName": "moyenPaiement",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "paiement"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "dateTransation",
+            "fieldType": "ZonedDateTime",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "montantTTC",
+            "fieldType": "Double",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20171028155438",
+    "entityTableName": "paiement",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false
+}

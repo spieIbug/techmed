@@ -1,0 +1,51 @@
+
+<div *ngIf="tarif">
+    <h2><span jhiTranslate="techmedApp.tarif.detail.title">Tarif</span> {{tarif.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="techmedApp.tarif.prixHT">Prix HT</span></dt>
+        <dd>
+            <span>{{tarif.prixHT}}</span>
+        </dd>
+        <dt><span jhiTranslate="techmedApp.tarif.tva">Tva</span></dt>
+        <dd>
+            <span>{{tarif.tva}}</span>
+        </dd>
+        <dt><span jhiTranslate="techmedApp.tarif.prixTTC">Prix TTC</span></dt>
+        <dd>
+            <span>{{tarif.prixTTC}}</span>
+        </dd>
+        <dt><span jhiTranslate="techmedApp.tarif.actif">Actif</span></dt>
+        <dd>
+            <span>{{tarif.actif}}</span>
+        </dd>
+        <dt><span jhiTranslate="techmedApp.tarif.dateDebut">Date Debut</span></dt>
+        <dd>
+            <span>{{tarif.dateDebut | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="techmedApp.tarif.dateFin">Date Fin</span></dt>
+        <dd>
+            <span>{{tarif.dateFin | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="techmedApp.tarif.acteMedical">Acte Medical</span></dt>
+        <dd>
+            <div *ngIf="tarif.acteMedicalId">
+                <a [routerLink]="['/acte-medical', tarif.acteMedicalId]">{{tarif.acteMedicalId}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'tarif/'+ tarif.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

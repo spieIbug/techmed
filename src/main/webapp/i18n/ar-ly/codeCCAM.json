@@ -1,0 +1,23 @@
+{
+    "techmedApp": {
+        "codeCCAM" : {
+            "home": {
+                "title": "Code CCAMS",
+                "createLabel": "Create a new Code CCAM",
+                "createOrEditLabel": "Create or edit a Code CCAM"
+            },
+            "created": "A new Code CCAM is created with identifier {{ param }}",
+            "updated": "A Code CCAM is updated with identifier {{ param }}",
+            "deleted": "A Code CCAM is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Code CCAM {{ id }}?"
+            },
+            "detail": {
+                "title": "Code CCAM"
+            },
+            "code": "Code",
+            "libelle": "Libelle",
+            "acteMedicalList": "Acte Medical List"
+        }
+    }
+}

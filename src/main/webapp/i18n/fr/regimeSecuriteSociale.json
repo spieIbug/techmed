@@ -1,0 +1,22 @@
+{
+    "techmedApp": {
+        "regimeSecuriteSociale" : {
+            "home": {
+                "title": "RegimeSecuriteSociales",
+                "createLabel": "Créer un nouveau Regime Securite Sociale",
+                "createOrEditLabel": "Créer ou éditer un Regime Securite Sociale"
+            },
+            "created": "Un nouveau Regime Securite Sociale a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Regime Securite Sociale avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Regime Securite Sociale avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Regime Securite Sociale {{ id }} ?"
+            },
+            "detail": {
+                "title": "Regime Securite Sociale"
+            },
+            "code": "Code",
+            "libelle": "Libelle"
+        }
+    }
+}

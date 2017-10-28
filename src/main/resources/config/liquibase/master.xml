@@ -5,6 +5,18 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171028155431_added_entity_Patient.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171028155432_added_entity_ActeMedical.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171028155433_added_entity_CodeCCAM.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171028155434_added_entity_MoyenPaiement.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171028155435_added_entity_Tarif.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171028155436_added_entity_RegimeSecuriteSociale.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171028155437_added_entity_Consultation.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171028155438_added_entity_Paiement.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20171028155432_added_entity_constraints_ActeMedical.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171028155435_added_entity_constraints_Tarif.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171028155437_added_entity_constraints_Consultation.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171028155438_added_entity_constraints_Paiement.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

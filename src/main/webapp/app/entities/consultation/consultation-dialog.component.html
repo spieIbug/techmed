@@ -1,0 +1,89 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myConsultationLabel" jhiTranslate="techmedApp.consultation.home.createOrEditLabel">Create or edit a Consultation</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!consultation.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="consultation.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="techmedApp.consultation.dateActe" for="field_dateActe">Date Acte</label>
+            <div class="d-flex">
+                <input id="field_dateActe" type="datetime-local" class="form-control" name="dateActe" [(ngModel)]="consultation.dateActe"
+                required  />
+            </div>
+            <div [hidden]="!(editForm.controls.dateActe?.dirty && editForm.controls.dateActe?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.dateActe?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+                <small class="form-text text-danger"
+                    [hidden]="!editForm.controls.dateActe?.errors?.ZonedDateTimelocal" jhiTranslate="entity.validation.ZonedDateTimelocal">
+                    This field should be a date and time.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="techmedApp.consultation.montantTTC" for="field_montantTTC">Montant TTC</label>
+            <input type="number" class="form-control" name="montantTTC" id="field_montantTTC"
+                [(ngModel)]="consultation.montantTTC" required />
+            <div [hidden]="!(editForm.controls.montantTTC?.dirty && editForm.controls.montantTTC?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.montantTTC?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+                <small class="form-text text-danger"
+                    [hidden]="!editForm.controls.montantTTC?.errors?.number" jhiTranslate="entity.validation.number">
+                    This field should be a number.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="techmedApp.consultation.lock" for="field_lock">Lock</label>
+            <textarea class="form-control" name="lock" id="field_lock"
+                [(ngModel)]="consultation.lock"  ></textarea>
+        </div>
+
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="techmedApp.consultation.patient" for="field_patient">Patient</label>
+            <select class="form-control" id="field_patient" name="patient" [(ngModel)]="consultation.patientId">
+                <option [ngValue]="null"></option>
+                <option [ngValue]="patientOption.id" *ngFor="let patientOption of patients; trackBy: trackPatientById">{{patientOption.id}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="techmedApp.consultation.medecin" for="field_medecin">Medecin</label>
+            <select class="form-control" id="field_medecin" name="medecin" [(ngModel)]="consultation.medecinId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="userOption.id" *ngFor="let userOption of users; trackBy: trackUserById">{{userOption.id}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="techmedApp.consultation.regimeSecuriteSociale" for="field_regimeSecuriteSociale">Regime Securite Sociale</label>
+            <select class="form-control" id="field_regimeSecuriteSociale" name="regimeSecuriteSociale" [(ngModel)]="consultation.regimeSecuriteSocialeId">
+                <option [ngValue]="null"></option>
+                <option [ngValue]="regimeSecuriteSocialeOption.id" *ngFor="let regimeSecuriteSocialeOption of regimesecuritesociales; trackBy: trackRegimeSecuriteSocialeById">{{regimeSecuriteSocialeOption.id}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label jhiTranslate="techmedApp.consultation.actesMedicalList" for="field_actesMedicalList">Actes Medical List</label>
+            <select class="form-control" id="field_actesMedicalList" multiple name="actesMedicalList" [(ngModel)]="consultation.actesMedicalLists">
+                <option [ngValue]="getSelected(consultation.actesMedicalLists, acteMedicalOption)" *ngFor="let acteMedicalOption of actemedicals; trackBy: trackActeMedicalById">{{acteMedicalOption.id}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

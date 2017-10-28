@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Consultation.
+    -->
+    <changeSet id="20171028155437-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="patient_id"
+                                 baseTableName="consultation"
+                                 constraintName="fk_consultation_patient_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="patient"/>
+
+        <addForeignKeyConstraint baseColumnNames="medecin_id"
+                                 baseTableName="consultation"
+                                 constraintName="fk_consultation_medecin_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="jhi_user"/>
+
+        <addForeignKeyConstraint baseColumnNames="regime_securite_sociale_id"
+                                 baseTableName="consultation"
+                                 constraintName="fk_consultation_regime_securite_sociale_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="regime_securite_sociale"/>
+
+        <addForeignKeyConstraint baseColumnNames="consultations_id"
+                                 baseTableName="consultation_actes_medical_list"
+                                 constraintName="fk_consultation_actes_medical_list_consultations_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="consultation"/>
+        <addForeignKeyConstraint baseColumnNames="actes_medical_lists_id"
+                                 baseTableName="consultation_actes_medical_list"
+                                 constraintName="fk_consultation_actes_medical_list_actes_medical_lists_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="acte_medical"/>
+        
+    </changeSet>
+</databaseChangeLog>

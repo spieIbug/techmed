@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <property name="now" value="now()" dbms="h2"/>
+
+    <property name="now" value="now()" dbms="mysql"/>
+    <property name="autoIncrement" value="true"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle, mssql"/>
+
+    <!--
+        Added the entity Consultation.
+    -->
+    <changeSet id="20171028155437-1" author="jhipster">
+        <createTable tableName="consultation">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="date_acte" type="timestamp">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="montant_ttc" type="double">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="jhi_lock" type="clob">
+                <constraints nullable="true" />
+            </column>
+            <column name="patient_id" type="bigint">
+                <constraints unique="true" nullable="true" />
+            </column>            <column name="medecin_id" type="bigint">
+                <constraints unique="true" nullable="true" />
+            </column>            <column name="regime_securite_sociale_id" type="bigint">
+                <constraints unique="true" nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
+        </createTable>
+        <dropDefaultValue tableName="consultation" columnName="date_acte" columnDataType="datetime"/>
+        
+        <createTable tableName="consultation_actes_medical_list">
+            <column name="actes_medical_lists_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="consultations_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addPrimaryKey columnNames="consultations_id, actes_medical_lists_id" tableName="consultation_actes_medical_list"/>
+        
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here, do not remove-->
+</databaseChangeLog>

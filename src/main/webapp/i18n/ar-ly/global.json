@@ -7,6 +7,14 @@
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "الكيانات",
+                "patient": "Patient",
+                "acteMedical": "Acte Medical",
+                "codeCcam": "Code CCAM",
+                "moyenPaiement": "Moyen Paiement",
+                "tarif": "Tarif",
+                "regimeSecuriteSociale": "Regime Securite Sociale",
+                "consultation": "Consultation",
+                "paiement": "Paiement",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
@@ -128,5 +136,5 @@
         "emailexists": "البريد الالكتروني قيد الاستخدام بالفعل!",
         "idexists": "{{ entityName }} جديد لا يمكن أن يكون له معرف بالفعل"
     },
-    "footer": "هنا يضع الفووتر"
+    "footer": "Techmed برنامج مجاني"
 }

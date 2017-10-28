@@ -1,0 +1,41 @@
+
+<div *ngIf="paiement">
+    <h2><span jhiTranslate="techmedApp.paiement.detail.title">Paiement</span> {{paiement.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="techmedApp.paiement.dateTransation">Date Transation</span></dt>
+        <dd>
+            <span>{{paiement.dateTransation | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="techmedApp.paiement.montantTTC">Montant TTC</span></dt>
+        <dd>
+            <span>{{paiement.montantTTC}}</span>
+        </dd>
+        <dt><span jhiTranslate="techmedApp.paiement.consultation">Consultation</span></dt>
+        <dd>
+            <div *ngIf="paiement.consultationId">
+                <a [routerLink]="['/consultation', paiement.consultationId]">{{paiement.consultationId}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="techmedApp.paiement.moyen">Moyen</span></dt>
+        <dd>
+            <div *ngIf="paiement.moyenId">
+                <a [routerLink]="['/moyen-paiement', paiement.moyenId]">{{paiement.moyenId}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'paiement/'+ paiement.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

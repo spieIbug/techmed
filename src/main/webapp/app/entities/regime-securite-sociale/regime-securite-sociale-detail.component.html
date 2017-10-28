@@ -1,0 +1,29 @@
+
+<div *ngIf="regimeSecuriteSociale">
+    <h2><span jhiTranslate="techmedApp.regimeSecuriteSociale.detail.title">Regime Securite Sociale</span> {{regimeSecuriteSociale.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="techmedApp.regimeSecuriteSociale.code">Code</span></dt>
+        <dd>
+            <span>{{regimeSecuriteSociale.code}}</span>
+        </dd>
+        <dt><span jhiTranslate="techmedApp.regimeSecuriteSociale.libelle">Libelle</span></dt>
+        <dd>
+            <span>{{regimeSecuriteSociale.libelle}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'regime-securite-sociale/'+ regimeSecuriteSociale.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

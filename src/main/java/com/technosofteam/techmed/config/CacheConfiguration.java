@@ -44,6 +44,19 @@ public class CacheConfiguration {
             cm.createCache(com.technosofteam.techmed.domain.User.class.getName(), jcacheConfiguration);
             cm.createCache(com.technosofteam.techmed.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(com.technosofteam.techmed.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            cm.createCache(com.technosofteam.techmed.domain.Patient.class.getName(), jcacheConfiguration);
+            cm.createCache(com.technosofteam.techmed.domain.ActeMedical.class.getName(), jcacheConfiguration);
+            cm.createCache(com.technosofteam.techmed.domain.ActeMedical.class.getName() + ".tarifs", jcacheConfiguration);
+            cm.createCache(com.technosofteam.techmed.domain.ActeMedical.class.getName() + ".consultationLists", jcacheConfiguration);
+            cm.createCache(com.technosofteam.techmed.domain.CodeCCAM.class.getName(), jcacheConfiguration);
+            cm.createCache(com.technosofteam.techmed.domain.CodeCCAM.class.getName() + ".acteMedicalLists", jcacheConfiguration);
+            cm.createCache(com.technosofteam.techmed.domain.MoyenPaiement.class.getName(), jcacheConfiguration);
+            cm.createCache(com.technosofteam.techmed.domain.Tarif.class.getName(), jcacheConfiguration);
+            cm.createCache(com.technosofteam.techmed.domain.RegimeSecuriteSociale.class.getName(), jcacheConfiguration);
+            cm.createCache(com.technosofteam.techmed.domain.Consultation.class.getName(), jcacheConfiguration);
+            cm.createCache(com.technosofteam.techmed.domain.Consultation.class.getName() + ".paiements", jcacheConfiguration);
+            cm.createCache(com.technosofteam.techmed.domain.Consultation.class.getName() + ".actesMedicalLists", jcacheConfiguration);
+            cm.createCache(com.technosofteam.techmed.domain.Paiement.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

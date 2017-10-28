@@ -1,0 +1,46 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "tarifs",
+            "otherEntityName": "tarif",
+            "otherEntityRelationshipName": "acteMedical"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "consultationList",
+            "otherEntityName": "consultation",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "actesMedicalList"
+        },
+        {
+            "relationshipName": "codeCCAM",
+            "otherEntityName": "codeCCAM",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "code",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "libelle",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20171028155432",
+    "entityTableName": "acte_medical",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false
+}

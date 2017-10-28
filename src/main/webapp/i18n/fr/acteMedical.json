@@ -1,0 +1,25 @@
+{
+    "techmedApp": {
+        "acteMedical" : {
+            "home": {
+                "title": "Actes Medicaux",
+                "createLabel": "Créer un nouvel acte médical",
+                "createOrEditLabel": "Créer ou éditer un acte médical"
+            },
+            "created": "Un nouvel acte medical a été créé avec l'identifiant {{ param }}",
+            "updated": "L'acte médical avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "L'acte médical avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Êtes-vous certain de vouloir supprimer l'acte Medical {{ id }} ?"
+            },
+            "detail": {
+                "title": "Acte Medical"
+            },
+            "code": "Code",
+            "libelle": "Libellé",
+            "tarifs": "Tarifs",
+            "consultationList": "Liste des consultations",
+            "codeCCAM": "Code CCAM"
+        }
+    }
+}
