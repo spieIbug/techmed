@@ -15,9 +15,9 @@
             "detail": {
                 "title": "Patient"
             },
-            "nom": "Nom",
-            "prenom": "Prenom",
-            "dateNaissance": "Date Naissance"
+            "nom": "First name",
+            "prenom": "Last name",
+            "dateNaissance": "date of birth"
         }
     }
 }

@@ -2,23 +2,23 @@
     "techmedApp": {
         "paiement" : {
             "home": {
-                "title": "Paiements",
-                "createLabel": "Create a new Paiement",
-                "createOrEditLabel": "Create or edit a Paiement"
+                "title": "المدفوعات",
+                "createLabel": "إضافة الدفع",
+                "createOrEditLabel": "إضافة أو تغيير الدفع"
             },
-            "created": "A new Paiement is created with identifier {{ param }}",
-            "updated": "A Paiement is updated with identifier {{ param }}",
-            "deleted": "A Paiement is deleted with identifier {{ param }}",
+            "created": "تم إضافة الدفع {{ param }}",
+            "updated": "تم تغيير الدفع {{ param }}",
+            "deleted": "تم حذف الدفع {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Paiement {{ id }}?"
+                "question": "أنت متاكد، هل تريد حدف الدفع {{ id }}?"
             },
             "detail": {
-                "title": "Paiement"
+                "title": "الدفع"
             },
-            "dateTransation": "Date Transation",
-            "montantTTC": "Montant TTC",
-            "consultation": "Consultation",
-            "moyen": "Moyen"
+            "dateTransation": "تاريخ الدفع",
+            "montantTTC": "الثمن مع كل الرسوم",
+            "consultation": "الفحص الطبي",
+            "moyen": "وسيلة الدفع"
         }
     }
 }

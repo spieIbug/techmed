@@ -2,23 +2,23 @@
     "techmedApp": {
         "paiement" : {
             "home": {
-                "title": "Paiements",
-                "createLabel": "Create a new Paiement",
-                "createOrEditLabel": "Create or edit a Paiement"
+                "title": "Payments",
+                "createLabel": "Create a new Payment",
+                "createOrEditLabel": "Create or edit a Payment"
             },
-            "created": "A new Paiement is created with identifier {{ param }}",
-            "updated": "A Paiement is updated with identifier {{ param }}",
-            "deleted": "A Paiement is deleted with identifier {{ param }}",
+            "created": "A new Payment is created with identifier {{ param }}",
+            "updated": "A Payment is updated with identifier {{ param }}",
+            "deleted": "A Payment is deleted with identifier {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Paiement {{ id }}?"
+                "question": "Are you sure you want to delete Payment {{ id }}?"
             },
             "detail": {
-                "title": "Paiement"
+                "title": "Payment"
             },
             "dateTransation": "Date Transation",
-            "montantTTC": "Montant TTC",
+            "montantTTC": "Price including tax",
             "consultation": "Consultation",
-            "moyen": "Moyen"
+            "moyen": "Payment method"
         }
     }
 }

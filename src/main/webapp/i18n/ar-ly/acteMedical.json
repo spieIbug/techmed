@@ -2,24 +2,24 @@
     "techmedApp": {
         "acteMedical" : {
             "home": {
-                "title": "Acte Medicals",
-                "createLabel": "Create a new Acte Medical",
-                "createOrEditLabel": "Create or edit a Acte Medical"
+                "title": "إجراءات طبية",
+                "createLabel": "إضافة إجراء طبي",
+                "createOrEditLabel": "إضافة أو تغيير إجراء طبي"
             },
-            "created": "A new Acte Medical is created with identifier {{ param }}",
-            "updated": "A Acte Medical is updated with identifier {{ param }}",
-            "deleted": "A Acte Medical is deleted with identifier {{ param }}",
+            "created": "تم إضافة الإجراء الطيبي {{ param }}",
+            "updated": "تم تغيير الإجراء الطيبي {{ param }}",
+            "deleted": "تم حذف الإجراء الطيبي {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Acte Medical {{ id }}?"
+                "question": "أنت متاكد أنك تريد حذف الإجراء الطيبي {{ id }}?"
             },
             "detail": {
-                "title": "Acte Medical"
+                "title": "إجراء طبي"
             },
-            "code": "Code",
-            "libelle": "Libelle",
-            "tarifs": "Tarifs",
-            "consultationList": "Consultation List",
-            "codeCCAM": "Code CCAM"
+            "code": "ترميز",
+            "libelle": "عنوان",
+            "tarifs": "الأسعار",
+            "consultationList": "قائمة الفحوص الطبية",
+            "codeCCAM": "ترميز CCAM"
         }
     }
 }

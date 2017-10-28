@@ -2,22 +2,22 @@
     "techmedApp": {
         "patient" : {
             "home": {
-                "title": "Patients",
-                "createLabel": "Create a new Patient",
-                "createOrEditLabel": "Create or edit a Patient"
+                "title": "قائمة المرضى",
+                "createLabel": "إضافة مريض",
+                "createOrEditLabel": "إضافة أو تغيير مريض"
             },
-            "created": "A new Patient is created with identifier {{ param }}",
-            "updated": "A Patient is updated with identifier {{ param }}",
-            "deleted": "A Patient is deleted with identifier {{ param }}",
+            "created": "تم إضافة المريض {{ param }}",
+            "updated": "تم تغيير المريض {{ param }}",
+            "deleted": "تم حذف المريض {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Patient {{ id }}?"
+                "question": "أنت متاكد، تريد حذف المريض {{ id }}?"
             },
             "detail": {
-                "title": "Patient"
+                "title": "المريض"
             },
-            "nom": "Nom",
-            "prenom": "Prenom",
-            "dateNaissance": "Date Naissance"
+            "nom": "اللقب",
+            "prenom": "الإسم",
+            "dateNaissance": "تاريخ الميلاد"
         }
     }
 }

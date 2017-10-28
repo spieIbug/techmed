@@ -15,7 +15,7 @@
             "detail": {
                 "title": "Paiement"
             },
-            "dateTransation": "Date Transation",
+            "dateTransation": "Date Transaction",
             "montantTTC": "Montant TTC",
             "consultation": "Consultation",
             "moyen": "Moyen"

@@ -6,7 +6,7 @@
                 "createLabel": "Create a new Consultation",
                 "createOrEditLabel": "Create or edit a Consultation"
             },
-            "created": "A new Consultation is created with identifier {{ param }}",
+            "created": "A new Consultation was created with identifier {{ param }}",
             "updated": "A Consultation is updated with identifier {{ param }}",
             "deleted": "A Consultation is deleted with identifier {{ param }}",
             "delete": {
@@ -15,14 +15,14 @@
             "detail": {
                 "title": "Consultation"
             },
-            "dateActe": "Date Acte",
-            "montantTTC": "Montant TTC",
+            "dateActe": "Date",
+            "montantTTC": "Price including tax",
             "lock": "Lock",
             "patient": "Patient",
-            "medecin": "Medecin",
-            "regimeSecuriteSociale": "Regime Securite Sociale",
-            "paiements": "Paiements",
-            "actesMedicalList": "Actes Medical List"
+            "medecin": "Doctor",
+            "regimeSecuriteSociale": "Social Security Scheme",
+            "paiements": "Payments",
+            "actesMedicalList": "Medical Acts List"
         }
     }
 }

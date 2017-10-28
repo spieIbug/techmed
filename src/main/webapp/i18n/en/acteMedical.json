@@ -2,23 +2,23 @@
     "techmedApp": {
         "acteMedical" : {
             "home": {
-                "title": "Acte Medicals",
-                "createLabel": "Create a new Acte Medical",
-                "createOrEditLabel": "Create or edit a Acte Medical"
+                "title": "Medical acts",
+                "createLabel": "Create a new Medical act",
+                "createOrEditLabel": "Create or edit a Medical Act"
             },
-            "created": "A new Acte Medical is created with identifier {{ param }}",
-            "updated": "A Acte Medical is updated with identifier {{ param }}",
-            "deleted": "A Acte Medical is deleted with identifier {{ param }}",
+            "created": "A new Medical Act was created with identifier {{ param }}",
+            "updated": "A Medical Act is updated with identifier {{ param }}",
+            "deleted": "A Medical Act is deleted with identifier {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Acte Medical {{ id }}?"
+                "question": "Are you sure you want to delete Medical Act {{ id }}?"
             },
             "detail": {
-                "title": "Acte Medical"
+                "title": "Medical Act"
             },
             "code": "Code",
-            "libelle": "Libelle",
-            "tarifs": "Tarifs",
-            "consultationList": "Consultation List",
+            "libelle": "Label",
+            "tarifs": "Tariffs",
+            "consultationList": "Consultations List",
             "codeCCAM": "Code CCAM"
         }
     }

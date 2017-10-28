@@ -2,7 +2,7 @@
     "techmedApp": {
         "codeCCAM" : {
             "home": {
-                "title": "CodeCCAMS",
+                "title": "Codes CCAM",
                 "createLabel": "Créer un nouveau Code CCAM",
                 "createOrEditLabel": "Créer ou éditer un Code CCAM"
             },
@@ -10,14 +10,14 @@
             "updated": "Le Code CCAM avec l'identifiant {{ param }} a été mis à jour",
             "deleted": "Le Code CCAM avec l'identifiant {{ param }} a été supprimé",
             "delete": {
-                "question": "Etes-vous certain de vouloir supprimer le Code CCAM {{ id }} ?"
+                "question": "Êtes-vous certain de vouloir supprimer le Code CCAM {{ id }} ?"
             },
             "detail": {
                 "title": "Code CCAM"
             },
             "code": "Code",
             "libelle": "Libelle",
-            "acteMedicalList": "Acte Medical List"
+            "acteMedicalList": "Liste des Acte Medical"
         }
     }
 }

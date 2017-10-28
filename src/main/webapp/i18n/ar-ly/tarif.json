@@ -2,26 +2,26 @@
     "techmedApp": {
         "tarif" : {
             "home": {
-                "title": "Tarifs",
-                "createLabel": "Create a new Tarif",
-                "createOrEditLabel": "Create or edit a Tarif"
+                "title": "قائمة الأسعار",
+                "createLabel": "إضافة تسعير جديد",
+                "createOrEditLabel": "إضافة أو تغيير تسعير"
             },
-            "created": "A new Tarif is created with identifier {{ param }}",
-            "updated": "A Tarif is updated with identifier {{ param }}",
-            "deleted": "A Tarif is deleted with identifier {{ param }}",
+            "created": "تم إضافة السعر {{ param }}",
+            "updated": "تم تغيير السعر {{ param }}",
+            "deleted": "تم حذف السعر {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Tarif {{ id }}?"
+                "question": "أنت متاكد، تريد حذف السعر {{ id }}?"
             },
             "detail": {
-                "title": "Tarif"
+                "title": "السعر"
             },
-            "prixHT": "Prix HT",
-            "tva": "Tva",
-            "prixTTC": "Prix TTC",
-            "actif": "Actif",
-            "dateDebut": "Date Debut",
-            "dateFin": "Date Fin",
-            "acteMedical": "Acte Medical"
+            "prixHT": "السعر باستثناء الضرائب",
+            "tva": "الضريبة",
+            "prixTTC": "السعر مع حساب الرسوم",
+            "actif": "جاري",
+            "dateDebut": "تاريخ البدا",
+            "dateFin": "تاريخ النهاية",
+            "acteMedical": "الإجراء الطبي"
         }
     }
 }

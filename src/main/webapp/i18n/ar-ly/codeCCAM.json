@@ -2,22 +2,22 @@
     "techmedApp": {
         "codeCCAM" : {
             "home": {
-                "title": "Code CCAMS",
-                "createLabel": "Create a new Code CCAM",
-                "createOrEditLabel": "Create or edit a Code CCAM"
+                "title": "ترميز CCAMS",
+                "createLabel": "إضافة ترميز CCAM",
+                "createOrEditLabel": "إضافة أو تغيير ترميز CCAM"
             },
-            "created": "A new Code CCAM is created with identifier {{ param }}",
-            "updated": "A Code CCAM is updated with identifier {{ param }}",
-            "deleted": "A Code CCAM is deleted with identifier {{ param }}",
+            "created": "تم إضافة الترميز CCAM {{ param }}",
+            "updated": "تم تغيير الترميز  CCAM{{ param }}",
+            "deleted": "تم حذف الترميز CCAM {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Code CCAM {{ id }}?"
+                "question": "أنت متاكد، هل تريد حذف ترميز CCAM {{ id }}?"
             },
             "detail": {
-                "title": "Code CCAM"
+                "title": "ترميز CCAM"
             },
-            "code": "Code",
-            "libelle": "Libelle",
-            "acteMedicalList": "Acte Medical List"
+            "code": "الترميز",
+            "libelle": "العنوان",
+            "acteMedicalList": "قائمة الإجراءات الطبية"
         }
     }
 }

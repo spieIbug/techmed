@@ -2,26 +2,26 @@
     "techmedApp": {
         "tarif" : {
             "home": {
-                "title": "Tarifs",
-                "createLabel": "Create a new Tarif",
-                "createOrEditLabel": "Create or edit a Tarif"
+                "title": "Tariffs",
+                "createLabel": "Create a new Tariff",
+                "createOrEditLabel": "Create or edit a Tariff"
             },
-            "created": "A new Tarif is created with identifier {{ param }}",
-            "updated": "A Tarif is updated with identifier {{ param }}",
-            "deleted": "A Tarif is deleted with identifier {{ param }}",
+            "created": "A new Tariff is created with identifier {{ param }}",
+            "updated": "A Tariff is updated with identifier {{ param }}",
+            "deleted": "A Tariff is deleted with identifier {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Tarif {{ id }}?"
+                "question": "Are you sure you want to delete Tariff {{ id }}?"
             },
             "detail": {
-                "title": "Tarif"
+                "title": "Tariff"
             },
-            "prixHT": "Prix HT",
-            "tva": "Tva",
-            "prixTTC": "Prix TTC",
-            "actif": "Actif",
-            "dateDebut": "Date Debut",
-            "dateFin": "Date Fin",
-            "acteMedical": "Acte Medical"
+            "prixHT": "Price excluding taxes",
+            "tva": "VAT",
+            "prixTTC": "Price including taxes",
+            "actif": "Enabled",
+            "dateDebut": "Start Date",
+            "dateFin": "End Date",
+            "acteMedical": "Medical Act"
         }
     }
 }

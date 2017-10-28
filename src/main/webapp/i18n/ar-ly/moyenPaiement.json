@@ -2,18 +2,18 @@
     "techmedApp": {
         "moyenPaiement" : {
             "home": {
-                "title": "Moyen Paiements",
-                "createLabel": "Create a new Moyen Paiement",
-                "createOrEditLabel": "Create or edit a Moyen Paiement"
+                "title": "وسائل الدفع",
+                "createLabel": "إضافة وسيلة دفع",
+                "createOrEditLabel": "إضافة أو تغيير وسيلة دفع"
             },
-            "created": "A new Moyen Paiement is created with identifier {{ param }}",
-            "updated": "A Moyen Paiement is updated with identifier {{ param }}",
-            "deleted": "A Moyen Paiement is deleted with identifier {{ param }}",
+            "created": "تم إضافة وسيلة الدفع {{ param }}",
+            "updated": "تم تغيير وسيلة الدفع {{ param }}",
+            "deleted": "تم حذف وسيلة الدفع {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Moyen Paiement {{ id }}?"
+                "question": "هل أنت متاكد، تريد حذف وسيلة الدفع {{ id }}?"
             },
             "detail": {
-                "title": "Moyen Paiement"
+                "title": "وسيلة الدفع"
             },
             "mode": "Mode"
         }

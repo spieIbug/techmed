@@ -2,18 +2,18 @@
     "techmedApp": {
         "moyenPaiement" : {
             "home": {
-                "title": "MoyenPaiements",
-                "createLabel": "Créer un nouveau Moyen Paiement",
-                "createOrEditLabel": "Créer ou éditer un Moyen Paiement"
+                "title": "Moyens de Paiement",
+                "createLabel": "Créer un nouveau Moyen de Paiement",
+                "createOrEditLabel": "Créer ou éditer un Moyen de Paiement"
             },
-            "created": "Un nouveau Moyen Paiement a été créé avec l'identifiant {{ param }}",
-            "updated": "Le Moyen Paiement avec l'identifiant {{ param }} a été mis à jour",
-            "deleted": "Le Moyen Paiement avec l'identifiant {{ param }} a été supprimé",
+            "created": "Un nouveau Moyen de Paiement a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Moyen de Paiement avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Moyen de Paiement avec l'identifiant {{ param }} a été supprimé",
             "delete": {
-                "question": "Etes-vous certain de vouloir supprimer le Moyen Paiement {{ id }} ?"
+                "question": "Êtes-vous certain de vouloir supprimer le Moyen de Paiement {{ id }} ?"
             },
             "detail": {
-                "title": "Moyen Paiement"
+                "title": "Moyen de Paiement"
             },
             "mode": "Mode"
         }

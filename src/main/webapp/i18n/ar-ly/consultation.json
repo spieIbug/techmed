@@ -2,27 +2,27 @@
     "techmedApp": {
         "consultation" : {
             "home": {
-                "title": "Consultations",
-                "createLabel": "Create a new Consultation",
-                "createOrEditLabel": "Create or edit a Consultation"
+                "title": "الفحوص الطبية",
+                "createLabel": "إضافة فحص طبي",
+                "createOrEditLabel": "إضافة أو تغيير فحص طبي"
             },
-            "created": "A new Consultation is created with identifier {{ param }}",
-            "updated": "A Consultation is updated with identifier {{ param }}",
-            "deleted": "A Consultation is deleted with identifier {{ param }}",
+            "created": "تم إضافة الفحص الطيبي {{ param }}",
+            "updated": "تم تغيير الفحص الطبي {{ param }}",
+            "deleted": "تم حدف الفحص الطيبي {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Consultation {{ id }}?"
+                "question": "هل أنت متاكد، أنت تريد حدف الفحص الطبي {{ id }}?"
             },
             "detail": {
-                "title": "Consultation"
+                "title": "الفحص الطبي"
             },
-            "dateActe": "Date Acte",
-            "montantTTC": "Montant TTC",
+            "dateActe": "تاريخ الفحص الطبي",
+            "montantTTC": "السعر مع كل الرسوم",
             "lock": "Lock",
-            "patient": "Patient",
-            "medecin": "Medecin",
-            "regimeSecuriteSociale": "Regime Securite Sociale",
-            "paiements": "Paiements",
-            "actesMedicalList": "Actes Medical List"
+            "patient": "المريض",
+            "medecin": "الطبيب",
+            "regimeSecuriteSociale": "نضام الضمان الإجتماعي",
+            "paiements": "الدفع",
+            "actesMedicalList": "الاجراءت الطيبية"
         }
     }
 }

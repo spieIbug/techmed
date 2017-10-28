@@ -10,7 +10,7 @@
             "updated": "Le Tarif avec l'identifiant {{ param }} a été mis à jour",
             "deleted": "Le Tarif avec l'identifiant {{ param }} a été supprimé",
             "delete": {
-                "question": "Etes-vous certain de vouloir supprimer le Tarif {{ id }} ?"
+                "question": "Êtes-vous certain de vouloir supprimer le Tarif {{ id }} ?"
             },
             "detail": {
                 "title": "Tarif"
@@ -19,9 +19,9 @@
             "tva": "Tva",
             "prixTTC": "Prix TTC",
             "actif": "Actif",
-            "dateDebut": "Date Debut",
+            "dateDebut": "Date Début",
             "dateFin": "Date Fin",
-            "acteMedical": "Acte Medical"
+            "acteMedical": "Acte Médical"
         }
     }
 }

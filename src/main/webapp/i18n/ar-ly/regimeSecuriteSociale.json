@@ -2,21 +2,21 @@
     "techmedApp": {
         "regimeSecuriteSociale" : {
             "home": {
-                "title": "Regime Securite Sociales",
-                "createLabel": "Create a new Regime Securite Sociale",
-                "createOrEditLabel": "Create or edit a Regime Securite Sociale"
+                "title": "نضام الضمان الإجتماعي",
+                "createLabel": "إضافة نضام الضمان الإجتماعي",
+                "createOrEditLabel": "إضافة أو تغيير نضام الضمان الإجتماعي"
             },
-            "created": "A new Regime Securite Sociale is created with identifier {{ param }}",
-            "updated": "A Regime Securite Sociale is updated with identifier {{ param }}",
-            "deleted": "A Regime Securite Sociale is deleted with identifier {{ param }}",
+            "created": "تم إضافة نضام الضمان الإجتماعي {{ param }}",
+            "updated": "تم تغيير نضام الضمان الإجتماعي {{ param }}",
+            "deleted": "تم حذف نضام الضمان الإجتماعي {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Regime Securite Sociale {{ id }}?"
+                "question": "أنت متاكد، تريد حذف نضام الضمان الإجتماعي {{ id }}?"
             },
             "detail": {
-                "title": "Regime Securite Sociale"
+                "title": "نضام الضمان الإجتماعي"
             },
-            "code": "Code",
-            "libelle": "Libelle"
+            "code": "الترميز",
+            "libelle": "العنوان"
         }
     }
 }
