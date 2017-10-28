@@ -91,7 +91,7 @@
             <label class="form-control-label" jhiTranslate="techmedApp.tarif.acteMedical" for="field_acteMedical">Acte Medical</label>
             <select class="form-control" id="field_acteMedical" name="acteMedical" [(ngModel)]="tarif.acteMedicalId" >
                 <option [ngValue]="null"></option>
-                <option [ngValue]="acteMedicalOption.id" *ngFor="let acteMedicalOption of actemedicals; trackBy: trackActeMedicalById">{{acteMedicalOption.id}}</option>
+                <option [ngValue]="acteMedicalOption.id" *ngFor="let acteMedicalOption of actemedicals; trackBy: trackActeMedicalById">{{acteMedicalOption.code + ' - ' + acteMedicalOption.libelle}}</option>
             </select>
         </div>
     </div>

@@ -19,17 +19,17 @@
                 </a>
             </li>
 
-            <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <li class="nav-item" *jhiHasAnyAuthority="'ROLE_USER'" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
                 <a class="nav-link" routerLink="consultation" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
-                    <i class="fa fa-fw fa-asterisk" aria-hidden="true"></i>
+                    <i class="fa fa-fw fa-stethoscope" aria-hidden="true"></i>
                     <span jhiTranslate="global.menu.consultation">Consultation</span>
                 </a>
             </li>
             <!-- jhipster-needle-add-element-to-menu - JHipster will add new menu items here -->
-            <li ngbDropdown *ngSwitchCase="true" ngbDropdown class="nav-item dropdown pointer" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <li ngbDropdown *jhiHasAnyAuthority="'ROLE_USER'" ngbDropdown class="nav-item dropdown pointer" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
                 <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="social-security-menu">
                     <span>
-                        <i class="fa fa-th-list" aria-hidden="true"></i>
+                        <i class="fa fa-folder" aria-hidden="true"></i>
                         <span jhiTranslate="global.menu.administratif.main">
                             Administratif
                         </span>
@@ -39,34 +39,34 @@
 
                     <li>
                         <a class="dropdown-item" routerLink="patient" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
-                            <i class="fa fa-fw fa-user" aria-hidden="true"></i>
+                            <i class="fa fa-fw fa-id-card" aria-hidden="true"></i>
                             <span jhiTranslate="global.menu.administratif.patient">Patient</span>
                         </a>
                     </li>
                     <li>
                         <a class="dropdown-item" routerLink="regime-securite-sociale" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
-                            <i class="fa fa-fw fa-asterisk" aria-hidden="true"></i>
+                            <i class="fa fa-fw fa-building-o" aria-hidden="true"></i>
                             <span jhiTranslate="global.menu.administratif.regimeSecuriteSociale">Regime Securite Sociale</span>
                         </a>
                     </li>
                     <li>
                         <a class="dropdown-item" routerLink="code-ccam" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
-                            <i class="fa fa-fw fa-asterisk" aria-hidden="true"></i>
+                            <i class="fa fa-fw fa-cog" aria-hidden="true"></i>
                             <span jhiTranslate="global.menu.administratif.codeCcam">Code Ccam</span>
                         </a>
                     </li>
                     <li>
                         <a class="dropdown-item" routerLink="acte-medical" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
-                            <i class="fa fa-fw fa-asterisk" aria-hidden="true"></i>
+                            <i class="fa fa-fw fa-user-md" aria-hidden="true"></i>
                             <span jhiTranslate="global.menu.administratif.acteMedical">Acte Medical</span>
                         </a>
                     </li>
                 </ul>
             </li>
-            <li ngbDropdown *ngSwitchCase="true" ngbDropdown class="nav-item dropdown pointer" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <li ngbDropdown *jhiHasAnyAuthority="'ROLE_USER'" ngbDropdown class="nav-item dropdown pointer" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
                 <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="comptabilite-menu">
                     <span>
-                        <i class="fa fa-th-list" aria-hidden="true"></i>
+                        <i class="fa fa-eur" aria-hidden="true"></i>
                         <span jhiTranslate="global.menu.comptabilite.main">
                             Comptabilité
                         </span>
@@ -75,19 +75,19 @@
                 <ul class="dropdown-menu" ngbDropdownMenu>
                     <li>
                         <a class="dropdown-item" routerLink="moyen-paiement" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
-                            <i class="fa fa-fw fa-asterisk" aria-hidden="true"></i>
+                            <i class="fa fa-fw fa-credit-card" aria-hidden="true"></i>
                             <span jhiTranslate="global.menu.comptabilite.moyenPaiement">Moyen Paiement</span>
                         </a>
                     </li>
                     <li>
                         <a class="dropdown-item" routerLink="tarif" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
-                            <i class="fa fa-fw fa-asterisk" aria-hidden="true"></i>
+                            <i class="fa fa-fw fa-list-alt" aria-hidden="true"></i>
                             <span jhiTranslate="global.menu.comptabilite.tarif">Tarif</span>
                         </a>
                     </li>
                     <li>
                         <a class="dropdown-item" routerLink="paiement" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
-                            <i class="fa fa-fw fa-asterisk" aria-hidden="true"></i>
+                            <i class="fa fa-fw fa-money" aria-hidden="true"></i>
                             <span jhiTranslate="global.menu.comptabilite.paiement">Paiement</span>
                         </a>
                     </li>

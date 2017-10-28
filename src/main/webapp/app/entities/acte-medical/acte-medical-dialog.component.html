@@ -39,7 +39,7 @@
             <label class="form-control-label" jhiTranslate="techmedApp.acteMedical.codeCCAM" for="field_codeCCAM">Code CCAM</label>
             <select class="form-control" id="field_codeCCAM" name="codeCCAM" [(ngModel)]="acteMedical.codeCCAMId" >
                 <option [ngValue]="null"></option>
-                <option [ngValue]="codeCCAMOption.id" *ngFor="let codeCCAMOption of codeccams; trackBy: trackCodeCCAMById">{{codeCCAMOption.id}}</option>
+                <option [ngValue]="codeCCAMOption.id" *ngFor="let codeCCAMOption of codeccams; trackBy: trackCodeCCAMById">{{codeCCAMOption.code + " - "+ codeCCAMOption.libelle}}</option>
             </select>
         </div>
     </div>
